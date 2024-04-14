@@ -24,6 +24,33 @@ namespace PROG6221_POE_ST10311687
 
                 Console.Write("\nEnter your choice: ");
                 int choice = int.Parse(Console.ReadLine());
+
+                switch (choice)
+                {
+                    case 1:
+                        recipe.EnterRecipeDetails();
+                        break;
+                    case 2:
+                        recipe.DisplayRecipe();
+                        break;
+                    case 3:
+                        Console.Write("Enter scaling factor (0.5, 2, or 3): ");
+                        double factor = double.Parse(Console.ReadLine());
+                        recipe.ScaleRecipe(factor);
+                        break;
+                    case 4:
+                        recipe.ResetQuantities();
+                        break;
+                    case 5:
+                        recipe.ClearRecipe();
+                        break;
+                    case 6:
+                        Environment.Exit(0);
+                        break;
+                    default:
+                        Console.WriteLine("Invalid choice!");
+                        break;
+                }
             }
         }
     }
