@@ -63,5 +63,34 @@ public class Recipe
             //Storing ingredients into an array
             ingredients[i] = new Ingredient(name, quantity, unit);
         }
+        Console.WriteLine("How many steps are in the " + recipeName + " recipe?");
+
+        int stepCount = int.Parse(Console.ReadLine());
+        steps = new Step[stepCount];
+
+        for (int i = 0; i < stepCount; i++)
+        {
+            Console.WriteLine($"Enter step {i + 1}:");
+            string description = Console.ReadLine();
+            steps[i] = new Step(description);
+        }
     }
+
+    public void DisplayRecipe()
+    {
+        Console.WriteLine("Recipe: " + recipeName);
+
+        Console.WriteLine("Ingredients: ");
+        foreach (var ingredient in ingredients)
+        {
+            Console.WriteLine($"{ingredient.Quantity} {ingredient.Unit} of {ingredient.Name}");
+        }
+
+        Console.WriteLine("\nSteps:");
+        for (int i = 0; i < steps.Length; i++)
+        {
+            Console.WriteLine($"{i + 1}. {steps[i].Description}");
+        }
+    }
+
 }
