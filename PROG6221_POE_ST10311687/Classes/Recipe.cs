@@ -4,9 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PROG6221_POE_ST10311687.Classes
+public class Ingredient
 {
-    internal class Recipe
+    public string Name { get; set; }
+    public float Quantity { get; set; }
+    public string Unit { get; set; }
+
+
+    public Ingredient(string name, float Quantity, String Unit)
     {
+        this.Name = name;
+        this.Quantity = Quantity;
+        this.Unit = Unit;
+
     }
 }
