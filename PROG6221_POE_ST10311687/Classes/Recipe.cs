@@ -29,3 +29,39 @@ class Step
         Description = description;
     }
 }
+
+public class Recipe
+{
+    private Ingredient[] ingredients;
+    private Step[] steps;
+    private static string recipeName;
+    private static char response;
+    private float PreviousScale = 1;
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public void EnterRecipeDetails()
+    {
+        Console.WriteLine("What would you like to call your recipe: ");
+        recipeName = Console.ReadLine();
+        Console.WriteLine("Enter the number of ingredients: ");
+        int ingredientCount = int.Parse(Console.ReadLine());
+        ingredients = new Ingredient[ingredientCount];
+
+        for (int i = 0; i < ingredientCount; i++)
+        {
+            Console.WriteLine($"Enter details for ingredient " + (i + 1) + ":");
+            Console.Write("Name: ");
+            string name = Console.ReadLine();
+
+            Console.Write("Quantity of " + name + ": ");
+            float quantity = float.Parse(Console.ReadLine());
+
+            Console.Write("Unit of measure for " + name + ": ");
+            string unit = Console.ReadLine();
+            //Storing ingredients into an array
+            ingredients[i] = new Ingredient(name, quantity, unit);
+        }
+    }
+}
