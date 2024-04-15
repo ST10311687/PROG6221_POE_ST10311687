@@ -93,4 +93,32 @@ public class Recipe
         }
     }
 
+    public void ScaleRecipe(char Scalefactor)
+    {
+        float Scale;
+        if (Scalefactor == 'a')
+        {
+            Scale = 0.5f;
+        }
+        else if (Scalefactor == 'b')
+        {
+            Scale = 2;
+        }
+        else if (Scalefactor == 'c')
+        {
+            Scale = 3;
+        }
+        else
+        {
+            throw new Exception("Invalid scale factor!");
+        }
+        for (int i = 0; i < ingredients.Length; i++)
+        {
+            ingredients[i].Quantity *= Scale;
+        }
+        PreviousScale = Scale;
+        Console.WriteLine("Scaled recipe by a factor of: " + Scale);
+
+    }
+
 }
