@@ -130,4 +130,10 @@ public class Recipe
         Console.WriteLine("Quantities have been reset by " + PreviousScale);
     }
 
+    public void ClearRecipe()
+    {
+        ingredients = null;
+        steps = null;
+    }
+
 }
