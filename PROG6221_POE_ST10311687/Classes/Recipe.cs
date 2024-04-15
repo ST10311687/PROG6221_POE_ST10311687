@@ -121,4 +121,13 @@ public class Recipe
 
     }
 
+    public void ResetQuantities()
+    {
+        for (int i = 0; i < ingredients.Length; i++)
+        {
+            ingredients[i].Quantity /= PreviousScale;
+        }
+        Console.WriteLine("Quantities have been reset by " + PreviousScale);
+    }
+
 }
