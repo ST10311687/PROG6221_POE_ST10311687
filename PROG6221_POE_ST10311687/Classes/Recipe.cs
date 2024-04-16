@@ -10,7 +10,12 @@ public class Ingredient
     public float Quantity { get; set; }
     public string Unit { get; set; }
 
-
+    /// <summary>
+    /// Getters and setters for each ingredient
+    /// </summary>
+    /// <param name="name"></param>
+    /// <param name="Quantity"></param>
+    /// <param name="Unit"></param>
     public Ingredient(string name, float Quantity, String Unit)
     {
         this.Name = name;
@@ -39,7 +44,7 @@ public class Recipe
     private float PreviousScale = 1;
 
     /// <summary>
-    /// 
+    /// This method allows the user to enter information about a recipe. This includes the recipes name, amount of ingredients, details of ingredients and the amount of steps in the recipe
     /// </summary>
     public void EnterRecipeDetails()
     {
@@ -48,7 +53,7 @@ public class Recipe
         Console.WriteLine("Enter the number of ingredients: ");
         int ingredientCount = int.Parse(Console.ReadLine());
         ingredients = new Ingredient[ingredientCount];
-
+        //Loop for user to enter ingredient information
         for (int i = 0; i < ingredientCount; i++)
         {
             Console.WriteLine($"Enter details for ingredient " + (i + 1) + ":");
@@ -65,6 +70,7 @@ public class Recipe
         }
         Console.WriteLine("How many steps are in the " + recipeName + " recipe?");
 
+        //Storing the amount of steps into an array
         int stepCount = int.Parse(Console.ReadLine());
         steps = new Step[stepCount];
 
@@ -74,8 +80,11 @@ public class Recipe
             string description = Console.ReadLine();
             steps[i] = new Step(description);
         }
+        Console.Clear();
     }
-
+    /// <summary>
+    /// This method allows the user to diplay all the detail they have entered for a recipe
+    /// </summary>
     public void DisplayRecipe()
     {
         Console.WriteLine("Recipe: " + recipeName);
@@ -91,8 +100,14 @@ public class Recipe
         {
             Console.WriteLine($"{i + 1}. {steps[i].Description}");
         }
+        Console.WriteLine("\n===============================================================");
     }
 
+    /// <summary>
+    /// This method is used to change the scale factor of the quantity of ingredients
+    /// </summary>
+    /// <param name="Scalefactor"></param>
+    /// <exception cref="Exception"></exception>
     public void ScaleRecipe(char Scalefactor)
     {
         float Scale;
@@ -118,9 +133,12 @@ public class Recipe
         }
         PreviousScale = Scale;
         Console.WriteLine("Scaled recipe by a factor of: " + Scale);
-
+        Console.Clear();
     }
 
+    /// <summary>
+    /// This method is used to set any previously scaled ingredients back to their original values.
+    /// </summary>
     public void ResetQuantities()
     {
         for (int i = 0; i < ingredients.Length; i++)
@@ -128,8 +146,12 @@ public class Recipe
             ingredients[i].Quantity /= PreviousScale;
         }
         Console.WriteLine("Quantities have been reset by " + PreviousScale);
+        Console.Clear();
     }
 
+    /// <summary>
+    /// This method simply clears all the values of ingredients and steps
+    /// </summary>
     public void ClearRecipe()
     {
         ingredients = null;

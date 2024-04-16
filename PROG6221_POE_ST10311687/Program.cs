@@ -1,4 +1,4 @@
-﻿using PROG6221_POE_ST10311687.Classes;
+﻿using PROG6221_POE_ST10311687;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,8 +34,8 @@ namespace PROG6221_POE_ST10311687
                         recipe.DisplayRecipe();
                         break;
                     case 3:
-                        Console.Write("Enter scaling factor (0.5, 2, or 3): ");
-                        double factor = double.Parse(Console.ReadLine());
+                        Console.Write("Enter scaling factor (a = 0.5, b = 2, or c = 3): ");
+                        char factor = char.Parse(Console.ReadLine());
                         recipe.ScaleRecipe(factor);
                         break;
                     case 4:
