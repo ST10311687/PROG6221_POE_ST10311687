@@ -1,7 +1,7 @@
 # ST10311687 Lee James PROG6221 POE PART 1
 
 ## About 
-This project can also be found on my GitHub repository:
+This project can also be found on my GitHub repository: https://github.com/ST10311687/PROG6221_POE_ST10311687
 
 
 ## How to use this project:
