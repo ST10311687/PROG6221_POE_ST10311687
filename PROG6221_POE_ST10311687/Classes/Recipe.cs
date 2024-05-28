@@ -56,6 +56,12 @@ public class Recipe
     /// </summary>
     public void DisplayRecipe()
     {
+        if (ingredients == null || steps == null)
+        {
+            Console.WriteLine("No recipe to display. Please enter recipe details first.");
+            return;
+        }
+
         Console.WriteLine("Recipe: " + recipeName);
 
         Console.WriteLine("Ingredients: ");
@@ -79,6 +85,12 @@ public class Recipe
     /// <exception cref="Exception"></exception>
     public void ScaleRecipe(char Scalefactor)
     {
+        if (ingredients == null)
+        {
+            Console.WriteLine("No ingredients to scale. Please enter recipe details first.");
+            return;
+        }
+
         float Scale;
         if (Scalefactor == 'a')
         {
@@ -110,6 +122,12 @@ public class Recipe
     /// </summary>
     public void ResetQuantities()
     {
+        if (ingredients == null)
+        {
+            Console.WriteLine("No ingredients to reset. Please enter recipe details first.");
+            return;
+        }
+
         for (int i = 0; i < ingredients.Length; i++)
         {
             ingredients[i].Quantity /= PreviousScale;
@@ -123,6 +141,12 @@ public class Recipe
     /// </summary>
     public void ClearRecipe()
     {
+        if (ingredients == null && steps == null)
+        {
+            Console.WriteLine("No recipe to clear.");
+            return;
+        }
+
         ingredients = null;
         steps = null;
     }
