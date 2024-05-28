@@ -147,8 +147,18 @@ public class Recipe
             return;
         }
 
-        ingredients = null;
-        steps = null;
+        Console.WriteLine("Are you sure you want to clear the recipe? (Y/N)");
+        char response = Console.ReadKey().KeyChar;
+        if (response == 'Y' || response == 'y')
+        {
+            ingredients = null;
+            steps = null;
+            Console.WriteLine("\nRecipe cleared.");
+        }
+        else
+        {
+            Console.WriteLine("\nOperation cancelled.");
+        }
     }
 
 }
