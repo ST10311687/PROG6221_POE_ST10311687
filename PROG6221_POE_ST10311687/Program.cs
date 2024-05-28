@@ -15,6 +15,7 @@ namespace PROG6221_POE_ST10311687
 
             while (true)
             {
+                //Menu that allows user to enter a number coresponding to an action
                 Console.WriteLine("\n1. Enter Recipe Details");
                 Console.WriteLine("2. Display Recipe");
                 Console.WriteLine("3. Scale Recipe");
@@ -34,6 +35,7 @@ namespace PROG6221_POE_ST10311687
                         recipe.DisplayRecipe();
                         break;
                     case 3:
+                        //Scale factor where user can scale their recipes values by a certain factor
                         Console.Write("Enter scaling factor (a = 0.5, b = 2, or c = 3): ");
                         char factor = char.Parse(Console.ReadLine());
                         recipe.ScaleRecipe(factor);
