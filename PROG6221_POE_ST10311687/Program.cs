@@ -9,27 +9,30 @@ namespace PROG6221_POE_ST10311687
 {
     internal class Program
     {
+        static List<Recipe> recipes = new List<Recipe>();
+        static Recipe.CalorieNotificationHandler calorieNotifier = message => Console.WriteLine(message);
+
         static void Main(string[] args)
         {
-            Recipe recipe = new Recipe();
+
 
             while (true)
             {
                 //Menu that allows user to enter a number coresponding to an action
                 Console.ForegroundColor = ConsoleColor.DarkRed;
-                Console.WriteLine("\n1. Enter Recipe Details");
+                Console.WriteLine("\n1. Add a Recipe");
                 Console.ResetColor();
                 Console.ForegroundColor = ConsoleColor.Magenta;
-                Console.WriteLine("2. Display Recipe");
+                Console.WriteLine("2. Display a Recipe");
                 Console.ResetColor();
                 Console.ForegroundColor = ConsoleColor.DarkCyan;
-                Console.WriteLine("3. Scale Recipe");
+                Console.WriteLine("3. Scale a Recipe");
                 Console.ResetColor();
                 Console.ForegroundColor = ConsoleColor.DarkGreen;
-                Console.WriteLine("4. Reset Quantities");
+                Console.WriteLine("4. Reset a Quantities");
                 Console.ResetColor();
                 Console.ForegroundColor = ConsoleColor.DarkYellow;
-                Console.WriteLine("5. Clear Recipe");
+                Console.WriteLine("5. Clear a Recipe");
                 Console.ResetColor();
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("6. Exit");
@@ -41,22 +44,19 @@ namespace PROG6221_POE_ST10311687
                 switch (choice)
                 {
                     case 1:
-                        recipe.EnterRecipeDetails();
+                        Recipe.EnterRecipeDetails(recipes);
                         break;
                     case 2:
-                        recipe.DisplayRecipe();
+                        Recipe.DisplayRecipe(recipes, calorieNotifier);
                         break;
                     case 3:
-                        //Scale factor where user can scale their recipes values by a certain factor
-                        Console.Write("Enter scaling factor (a = 0.5, b = 2, or c = 3): ");
-                        char factor = char.Parse(Console.ReadLine());
-                        recipe.ScaleRecipe(factor);
+                        Recipe.ScaleRecipe(recipes);
                         break;
                     case 4:
-                        recipe.ResetQuantities();
+                        Recipe.ResetQuantities(recipes);
                         break;
                     case 5:
-                        recipe.ClearRecipe();
+                        Recipe.ClearRecipe(recipes);
                         break;
                     case 6:
                         Environment.Exit(0);
