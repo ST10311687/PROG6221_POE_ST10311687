@@ -9,13 +9,14 @@ namespace PROG6221_POE_ST10311687
 {
     internal class Program
     {
+        // List of recipes
         public static List<Recipe> recipes = new List<Recipe>();
+        // Delegate instance for calorie notification
         public static Recipe.CalorieNotificationHandler calorieNotifier = message => Console.WriteLine(message);
 
         static void Main(string[] args)
         {
-
-
+            // Infinite loop to keep the program running until the user decides to exit
             while (true)
             {
                 //Menu that allows user to enter a number coresponding to an action
@@ -41,6 +42,7 @@ namespace PROG6221_POE_ST10311687
                 Console.Write("\nEnter your choice: ");
                 int choice = int.Parse(Console.ReadLine());
 
+                // Perform an action based on the user's choice
                 switch (choice)
                 {
                     case 1:
@@ -72,6 +74,14 @@ namespace PROG6221_POE_ST10311687
 
 #region Reference List
 /* Troelsen, A.and Japikse, P. 2024. Pro C# 9 with .NET 5.
-         New York: Apress.*/
+New York: Apress.
+
+CamSoper, 2024. Unit testing C# in .NET. Unit testing C# in .NET, 7 March, p. 5.
+
+Koshy, B., 2019. Stack overflow. [Online] 
+Available at: https://stackoverflow.com/questions/2019402/when-why-to-use-delegates
+[Accessed 28 May 2024].
+*/
+
 #endregion
 //============================================================ EndOfProgram ============================================================//
