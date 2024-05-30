@@ -6,14 +6,22 @@ This project can also be found on my GitHub repository: https://github.com/ST103
 ## UPDATE
 
 Added more references.
+
 I have check and I am using .NET Framework4.8
+
 Implemented error handling for null values, incorrect value types and now displays appropriate error meassages.
+
 Added color text in the display.
+
 User now has to confirm before clearing data.
-Added seperator lines
-Added end-of-file line
-Added more comments
-Seperated classes into separate files
+
+Added seperator lines.
+
+Added end-of-file line.
+
+Added more comments.
+
+Seperated classes into separate files.
 
 ## How to use this project:
 
