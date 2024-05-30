@@ -9,8 +9,8 @@ namespace PROG6221_POE_ST10311687
 {
     internal class Program
     {
-        static List<Recipe> recipes = new List<Recipe>();
-        static Recipe.CalorieNotificationHandler calorieNotifier = message => Console.WriteLine(message);
+        public static List<Recipe> recipes = new List<Recipe>();
+        public static Recipe.CalorieNotificationHandler calorieNotifier = message => Console.WriteLine(message);
 
         static void Main(string[] args)
         {

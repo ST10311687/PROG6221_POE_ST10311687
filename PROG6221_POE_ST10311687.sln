@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34616.47
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PROG6221_POE_ST10311687", "PROG6221_POE_ST10311687\PROG6221_POE_ST10311687.csproj", "{41855459-FA5A-45AF-900E-AAB20BFEB087}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestTotalCalorie", "UnitTestTotalCalorie\UnitTestTotalCalorie.csproj", "{D1A7DCD0-279F-4070-B925-82F1E38B57DD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{41855459-FA5A-45AF-900E-AAB20BFEB087}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{41855459-FA5A-45AF-900E-AAB20BFEB087}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{41855459-FA5A-45AF-900E-AAB20BFEB087}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1A7DCD0-279F-4070-B925-82F1E38B57DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1A7DCD0-279F-4070-B925-82F1E38B57DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1A7DCD0-279F-4070-B925-82F1E38B57DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1A7DCD0-279F-4070-B925-82F1E38B57DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

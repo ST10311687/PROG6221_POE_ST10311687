@@ -4,12 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public class Step
+namespace PROG6221_POE_ST10311687
 {
-    public string Description { get; set; }
-
-    public Step(string description)
+    public class Step
     {
-        Description = description;
+        public string Description { get; set; }
+
+        public Step(string description)
+        {
+            Description = description;
+        }
     }
 }
